@@ -36,16 +36,16 @@ leaderRouter
     next();
   })
   .get((req, res, next) => {
-    res.end("we will send you requested dish" + req.params.leaderID + "to you");
+    res.end("we will send you requested leaders" + req.params.leaderID + "to you");
   })
   .post((req, res, next) => {
     res.statusCode = 403;
-    res.end(" post  not supported in dishes" + req.params.leaderID + "");
+    res.end(" post  not supported in leaders" + req.params.leaderID + "");
   })
   .put((req, res, next) => {
-    res.write("updating the dish" + req.params.leaderID+ "\n");
+    res.write("updating the leaders" + req.params.leaderID+ "\n");
     res.end(
-      "will update the dish" +
+      "will update the leaders" +
         req.body.name +
         "with details" +
         req.body.description
